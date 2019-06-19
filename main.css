@@ -85,17 +85,14 @@ main {
     margin: 0;
     padding: 0;
     top: 0;
-    left: calc(100vh - 350px);
-    /* width: 100%; */
+    left: 40%;
     height: 100vh;
-    /* min-width: 970px; */
     width: 40.4em;
-    /* max-height: 1000px; */
-    min-height: 900px;
+    min-height: 920px;
     background: url('images/ironman.png') no-repeat;
-    background-size: calc(25rem - 10%);
+    background-size: calc(22rem - 10%);
     background-position-x: 0;
-    background-position-y: calc(10vh - 10%);
+    background-position-y: calc(25vh - 20%);
     z-index: 1;
 }
 .inner {
@@ -114,9 +111,12 @@ main {
 
 
 .inner .iron {
+    width: 47%;
+    flex-grow: 1;
+
     background-color: white;
     color: grey;
-    flex-grow: 1;
+
     display: flex;
     justify-content: flex-end;
 }
@@ -158,13 +158,14 @@ main {
     color: white;
 }
 .inner .man {
+    width: 53%;
+    flex-grow: 1;
+
     background-repeat: no-repeat;
     background-image: url('images/bg2.png'), linear-gradient(#ffffff09, #19181d);
     background-position: center -10%;
     background-size: cover;
-
     color: grey;
-    flex-grow: 2;
 }
 .inner .man .line svg {
     max-width: 100px;
@@ -212,4 +213,73 @@ button:hover {
 }
 .dots a:hover span.dot, .dots a.active span.dot {
     border: 2px solid white;
+}
+
+
+@media (min-width: 2800px) {
+    .ironman{
+        left: 47%;
+        background-position-y: 170px;
+    }
+}
+
+
+/* MOBILE */
+@media (max-width: 767px) {
+    body {
+        background: none;
+        margin: 0;
+    }
+    .container{
+        margin: 0;
+        min-width:300px;    
+    }
+    header{
+        padding: 0 3rem;
+    }
+    main{
+        flex-direction: column;
+    }
+    .ironman, footer{
+        display: none;
+    }
+    .inner{
+        flex-direction: column;
+    }
+    .left_menu div ul{
+        transform: none;
+        margin: 0 0 1rem 0;
+        padding: 0 2rem;
+        height: auto;
+        flex-direction: column;
+        list-style: none;
+    }
+    .left_menu div ul li{
+        margin: 0.5rem;
+    }
+    .inner .iron, .inner .man {
+        width: 100%;
+        justify-content: center;
+        padding:0;
+    }
+    .inner .man h2 {
+        text-align: center;
+    }
+    .sidebar{
+        /* height: 70px; */
+    }
+    .dots{
+        width: 100%;
+    }
+    .dots ul{  
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+
+    }
+    .dots ul li{
+        padding: 2rem;
+        flex-grow: 1;
+
+    }
 }
