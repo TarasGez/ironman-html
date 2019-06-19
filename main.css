@@ -225,7 +225,7 @@ button:hover {
 
 
 /* MOBILE */
-@media (max-width: 767px) {
+@media (max-width: 980px) {
     body {
         background: none;
         margin: 0;
@@ -245,6 +245,10 @@ button:hover {
     }
     .inner{
         flex-direction: column;
+        font-size: 1.5em;
+    }
+    .inner h2{
+        font-size: 8em;
     }
     .left_menu div ul{
         transform: none;
@@ -253,6 +257,7 @@ button:hover {
         height: auto;
         flex-direction: column;
         list-style: none;
+        font-size: 2em;
     }
     .left_menu div ul li{
         margin: 0.5rem;
